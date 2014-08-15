@@ -1,0 +1,42 @@
+﻿<Window x:Class="MagicArmV01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" WindowState="Maximized" Width="1366" Height="768">
+    <StackPanel>
+        <Grid Name="grid" Height="500" IsEnabled="False">
+            <Grid.Background>
+                <ImageBrush ImageSource="res/line.jpg"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="317"></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Label Content="X" HorizontalAlignment="Left" Height="27" Margin="982,48,0,0" VerticalAlignment="Top" Width="19"/>
+            <Label Content="Y" HorizontalAlignment="Left" Height="27" Margin="982,72,0,0" VerticalAlignment="Top" Width="19"/>
+            <Label Content="Z" HorizontalAlignment="Left" Height="27" Margin="982,96,0,0" VerticalAlignment="Top" Width="19"/>
+            <Label x:Name="lblAngleX"  Content="" HorizontalAlignment="Left" Height="27" Margin="1009,48,0,0" VerticalAlignment="Top" Width="90"/>
+            <Label x:Name="lblAngleY"  Content="" HorizontalAlignment="Left" Height="27" Margin="1009,72,0,0" VerticalAlignment="Top" Width="90"/>
+            <Label x:Name="lblAngleZ"  Content="" HorizontalAlignment="Left" Height="27" Margin="1009,96,0,0" VerticalAlignment="Top" Width="90"/>
+            <Label x:Name="lblAccZ"  Content="" HorizontalAlignment="Left" Height="27" Margin="1132,96,0,0" VerticalAlignment="Top" Width="90"/>
+            <!--<Canvas Name="LineCanvas" Grid.Row="0" Margin="0,0,0,33" Grid.RowSpan="3"/>-->
+        </Grid>
+        <Grid OverridesDefaultStyle="True" Margin="2,0,-2,0">
+            <ComboBox x:Name="combo" HorizontalAlignment="Left" Margin="155,10,0,0" VerticalAlignment="Top" Width="90"/>
+            <Button x:Name="btnStart" Content="开始" Margin="31,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" Click="btnStart_Click"/>
+            <Image x:Name="ok" Source="res/ok.png" Height=" 200" Width="200" Margin="577,4,581,-4" Opacity="0"/>
+            <Image x:Name="right" Source="res/right.png" Height=" 160" Width="140" Margin="577,4,581,-4" Opacity="0"/>
+            <Image x:Name="shoot" Source="res/shoot.png" Height=" 160" Width="140" Margin="577,4,581,-4" Opacity="0"/>
+            <Image x:Name="snap" Source="res/snap.png" Height=" 160" Width="140" Margin="577,4,581,-4" Opacity="0"/>
+            <Image x:Name="fist" Source="res/fist.png" Height=" 160" Width="140" Margin="577,4,581,-4" Opacity="0"/>
+            <Image x:Name="up" Source="res/up.png" Height=" 160" Width="140" Margin="587,4,571,-4" Opacity="0"/>
+            <Image x:Name="left" Source="res/left.png" Height=" 160" Width="140" Margin="577,4,581,-4" Opacity="0"/>
+            <Image x:Name="down" Source="res/down.png" Height=" 160" Width="140" Margin="577,4,581,-4" Opacity="0"/>
+            <Button x:Name="btnClear" Content="clear" Margin="512,8,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" Click="btnClear_Click"/>
+            <ComboBox x:Name="channel" HorizontalAlignment="Left" Margin="278,10,0,0" VerticalAlignment="Top" Width="50" AlternationCount="-32"/>
+            <TextBox x:Name="txtAction" HorizontalAlignment="Left" Height="21" Margin="762,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="106"/>
+            <Slider x:Name="valueGain" HorizontalAlignment="Left" Margin="384,8,0,0" VerticalAlignment="Top" Width="106" Value="5" SelectionEnd="20" Maximum="20"/>
+            <RadioButton Content="SEMG" IsChecked="True" x:Name="lineTypeSemg" GroupName="lineType" HorizontalAlignment="Left" Margin="31,81,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="MPU" IsChecked="False"  x:Name="lineTypeMpu" GroupName="lineType" HorizontalAlignment="Left" Margin="31,64,0,0" VerticalAlignment="Top"/>
+        </Grid>
+    </StackPanel>
+</Window>
